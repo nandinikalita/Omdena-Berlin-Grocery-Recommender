@@ -1,3 +1,3 @@
-# omdena-berlin-recommender-streamlit
+# Omdena-Berlin-Grocery-Recommender
 
-https://zibaatak-omdena-berlin-recommender-streamlit-app-3lngnh.streamlit.app/
+https://nandinikalita-omdena-berlin-grocery-recommender-app-0vec21.streamlit.app/
