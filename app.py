@@ -20,18 +20,18 @@ lemmatizer = WordNetLemmatizer()
 
 @st.cache_data
 def load_txtembd():
-    file_path = 'text_embeddings.pkl'  # Path to the pickle file
-    with open(file_path, 'rb') as file:
+    file_path = 'text_embeddings.pkl.gz'  # Path to the pickle file
+    with gzip.open(file_path, 'rb') as file:
         text_embeddings = pickle.load(file)
     return text_embeddings
-
+file.close()
 
 @st.cache_data
 def load_df():
     file_path = 'processed_df.gz'  # Path to the pickle file
     processed_df= pd.read_csv(file_path, low_memory=False, encoding='utf-8')
     return processed_df
-
+file.close()
 
 
 @st.cache_data
@@ -40,6 +40,7 @@ def load_vectorizer():
     with open(file_path, 'rb') as file:
         tfidf_vectorizer = pickle.load(file)
     return tfidf_vectorizer
+file.close()
 
 
 text_embeddings = load_txtembd()
