@@ -2,4 +2,4 @@ scikit-learn
 nltk
 pandas
 Tfidf
-CosineSimilarity
+cosine_similarity
